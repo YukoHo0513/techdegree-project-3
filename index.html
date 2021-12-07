@@ -19,123 +19,84 @@
         <h2>THE CODE REVIEW</h2>
     </header>
     <main>
+        <div class="signup">
+            <h3>Signup for our newsletter</h3>
+            <div class="faded">Get the latest news on how your code is doing right in your inbox</div>
+        </div>
         <form action="/index.html" method="post">
-            <div class="signup">
-                <h3>Signup for our newsletter</h3>
-                <div class="faded">Get the latest news on how your code is doing right in your inbox</div>
-            </div>
             <div class="contact">
-                <h3>Contact Information</h3>
-                <div class="row">
-                    <div class="col title-col">
-                        <label class="faded" for="fname">Full Name</label>
+                <fieldset>
+                    <legend class="space">Contact Information</legend>
+                    <div class="row">
+                        <label class="faded col title-col" for="fname">Full Name</label>
+                        <input class="col box-col" type="text" id="fname" name="fullname" placeholder="Required">
                     </div>
-                    <div class="col box-col">
-                        <div class="relative">
-                            <input type="text" id="fname" name="fullname">
-                            <div class="absolute">Required</div>
+                    <div class="row">
+                        <label class="faded col title-col" for="email">Email Address</label>
+                        <input class="col box-col" type="email" id="email" name="email" placeholder="Required">
+                    </div>
+                    <div class="row">
+                        <label class="faded col title-col" for="phone">Phone Number</label>
+                        <input class="col box-col" type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="row">
+                        <label class="faded col title-col" for="address">Street Address</label>
+                        <input class="col box-col" type="text" id="address" name="address">
+                    </div>
+                    <div class="row">
+                        <label class="faded col title-col" for="city">City</label>
+                        <input class="col box-col" type="text" id="city" name="city">
+                    </div>
+                    <div class="row">
+                        <label class="faded col title-col">State</label>
+                        <div class="col box-col">
+                            <div class="relative">
+                                <span class="t-triangle">&#9650;</span>
+                                <span class="b-triangle">&#9660;</span>
+                                <select class="select hover">
+                                    <option value="">Choose State</option>
+                                    <option value="alaska">Alaska</option>
+                                    <option value="california">California</option>
+                                    <option value="florida">Florida</option>
+                                    <option value="hawaii">Hawaii</option>
+                                    <option value="Massachusetts">Massachusetts</option>
+                                    <option value="new_jersey">New Jersey</option>
+                                    <option value="texas">Texas</option>
+                                    <option value="virginia">Virginia</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-
-                </div>
-                <div class="row">
-                    <div class="col title-col">
-                        <label class="faded" for="email">Email Address</label>
+                    <div class="row">
+                        <label class="faded col title-col" for="zipcode">Zip Code</label>
+                        <input class="zip-code col box-col" type="text" id="zipcode" name="zipcode">
                     </div>
-                    <div class="col box-col">
-                        <div class="relative">
-                            <input type="text" id="email" name="email">
-                            <div class="absolute">Required</div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="row">
-                    <div class="col title-col">
-                        <label class="faded" for="phone">Phone Number</label>
-                    </div>
-                    <div class="col box-col">
-                        <div class="relative">
-                            <input type="text" id="phone" name="phone">
-                        </div>
-                    </div>
-
-                </div>
-                <div class="row">
-                    <div class="col title-col">
-                        <label class="faded" for="address">Street Address</label>
-                    </div>
-                    <div class="col box-col">
-                        <div class="relative">
-                            <input type="text" id="address" name="address">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col title-col">
-                        <label class="faded" for="city">City</label>
-                    </div>
-                    <div class="col box-col">
-                        <div class="relative">
-                            <input type="text" id="city" name="city">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col title-col">
-                        <div class="faded">State</div>
-                    </div>
-                    <div class="col box-col">
-                        <div class="relative">
-                            <span class="t-triangle">&#9650;</span>
-                            <span class="b-triangle">&#9660;</span>
-                            <select class="select hover">
-                                <option value="">Choose State</option>
-                                <option value="alaska">Alaska</option>
-                                <option value="california">California</option>
-                                <option value="florida">Florida</option>
-                                <option value="hawaii">Hawaii</option>
-                                <option value="Massachusetts">Massachusetts</option>
-                                <option value="new_jersey">New Jersey</option>
-                                <option value="texas">Texas</option>
-                                <option value="virginia">Virginia</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col title-col">
-                        <label class="faded" for="zipcode">Zip Code</label>
-                    </div>
-                    <div class="col box-col">
-                        <div class="relative zip-code">
-                            <input type="text" id="zipcode" name="zipcode">
-                        </div>
-                    </div>
-                </div>
+                </fieldset>
             </div>
             <div class="newsletter">
-                <h3 class="n-letter">Newsletter</h3>
-                <div class="faded">Select the newsletters you would like to receive</div>
-                <div>
-                    <input type="checkbox" id="html-news" name="newsletter" value="html-news">
-                    <label for="html-news" class="faded">HTML News</label><br>
-                    <input type="checkbox" id="css" name="newsletter" value="css">
-                    <label for="css" class="faded">CSS News</label><br>
-                    <input type="checkbox" id="java" name="newsletter" value="java">
-                    <label for="java" class="faded">Javascript News</label>
-                </div>
-                <div class="faded format">Newsletter format</div>
-                <div>
-                    <input type="radio" id="html" name="newsletter-format" value="html">
-                    <label for="html" class="faded">HTML</label><br>
-                    <input type="radio" id="plain-text" name="newsletter-format" value="plain-text">
-                    <label for="plain-text" class="faded">Plain text</label>
-                </div>
-                <div class="topics">
-                    <label for="topics" class="faded">Other topics you'd like to hear about</label><br>
-                    <textarea name="topics" id="topics"></textarea>
-                </div>
+                <fieldset>
+                    <legend class="n-letter">Newsletter</legend>
+                    <div class="faded">Select the newsletters you would like to receive</div>
+                    <div>
+                        <input type="checkbox" id="html-news" name="newsletter" value="html-news">
+                        <label for="html-news" class="faded">HTML News</label><br>
+                        <input type="checkbox" id="css" name="newsletter" value="css">
+                        <label for="css" class="faded">CSS News</label><br>
+                        <input type="checkbox" id="java" name="newsletter" value="java">
+                        <label for="java" class="faded">Javascript News</label>
+                    </div>
+                    <div class="faded format">Newsletter format</div>
+                    <div>
+                        <input type="radio" id="html" name="newsletter-format" value="html">
+                        <label for="html" class="faded">HTML</label><br>
+                        <input type="radio" id="plain-text" name="newsletter-format" value="plain-text">
+                        <label for="plain-text" class="faded">Plain text</label>
+                    </div>
+                    <div class="topics">
+                        <label for="topics" class="faded">Other topics you'd like to hear about</label><br>
+                        <textarea name="topics" id="topics"></textarea>
+                    </div>
+                </fieldset>
                 <div class="button">
                     <input type="submit" value="Sign Up">
                 </div>

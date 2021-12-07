@@ -34,9 +34,19 @@ h2 {
     border-bottom: solid #2c3a45 4px;
     padding-bottom: 30px;
 }
-h3 {
+fieldset {
+    border: transparent;
+    padding: 0;
+    margin: 0;
+}
+legend {
     margin-top: 30px;
     font-size: 29px;
+    font-weight: bold;
+}
+.space {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .row {
     display: flex;
@@ -45,7 +55,9 @@ h3 {
 .col {
     margin-bottom: 15px;
 }
-input[type="text"] {
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
     box-sizing: border-box;
     width: 100%;
     height: 60px;
@@ -53,22 +65,27 @@ input[type="text"] {
     border-color: transparent;
     border-radius: 5px;
 }
-input[type="text"]:hover {
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover {
     border: solid 3px #2c3a45;
 }
-input[type="text"]:focus {
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
     outline: none !important;
     border: solid 3px #2c3a45;
 }
 .relative {
     position: relative;
 }
-.absolute {
-    position: absolute;
-    right: 30px;
-    top: 20px;
+input[type="text"]::placeholder,
+input[type="email"]::placeholder {
+    text-align: right;
+    padding-right: 0;
     color: #bdc1c4;
     font-size: 18px;
+
 }
 .zip-code {
     width: 50%;
@@ -92,7 +109,6 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
     text-indent: 1px;
-    text-overflow: '';
 }
 span.t-triangle {
     position: absolute;
@@ -166,6 +182,11 @@ em {
     }
     .col {
         justify-content: space-between;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+        width: 70%;
     }
     .title-col {
         width: 30%;
